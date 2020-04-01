@@ -31,14 +31,14 @@ functions:
      - http:
          path: /goodbye
          method: get
-  # candidateSubmission:
-  #   handler: api/candidate.submit
-  #   memorySize: 128
-  #   description: Submit candidate information and starts interview process.
-  #   events:
-  #     - http: 
-  #         path: candidates
-  #         method: post
+  candidateSubmission:
+    handler: Api/services.submit
+    memorySize: 128
+    description: Submit candidate information and starts interview process.
+    events:
+      - http: 
+          path: candidates
+          method: post
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
